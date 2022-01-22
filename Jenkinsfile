@@ -23,7 +23,7 @@ pipeline {
         }
 
         stage('Build App'){
-                echo 'Building App'
+
 //              steps{
 //                  git branch: 'openshift-aws', url: 'https://github.com/pavankjadda/BookStore.git'
 //                       script {
@@ -35,7 +35,7 @@ pipeline {
 //                   }
             steps {
 
-
+                     echo 'Building App'
                   // Get some code from a GitHub repository
                   git 'https://github.com/Pratiksha0401/AWS_Demo1.git'
 

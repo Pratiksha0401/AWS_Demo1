@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven "M3"
+        maven "MAVEN_HOME"
     }
     stages {
         stage('Build') {
@@ -23,6 +23,7 @@ pipeline {
         }
 
         stage('Build App'){
+                echo 'Building App'
 //              steps{
 //                  git branch: 'openshift-aws', url: 'https://github.com/pavankjadda/BookStore.git'
 //                       script {
@@ -33,6 +34,8 @@ pipeline {
 //                     }
 //                   }
             steps {
+
+
                   // Get some code from a GitHub repository
                   git 'https://github.com/Pratiksha0401/AWS_Demo1.git'
 

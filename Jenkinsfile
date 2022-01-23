@@ -27,4 +27,6 @@
                       archiveArtifacts 'target/*.jar'
                    }
                 }
+            }
+       }
 }

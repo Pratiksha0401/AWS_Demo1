@@ -1,6 +1,7 @@
  pipeline
       {
        agent any
+       //spring application runs without maven tool as well
 //         tools
 //         {
 //             maven 'MAVEN_HOME'
@@ -16,7 +17,7 @@
                 //sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
 
                 // To run Maven on a Windows agent, use
-                bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                bat "mvn -Dmaven.test.failure.ignore=true clean install package"
                 }
 
                 post {

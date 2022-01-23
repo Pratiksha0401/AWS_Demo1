@@ -3,7 +3,7 @@
        agent any
         tools
         {
-            maven 'M3'
+            maven 'MAVEN_HOME'
         }
 
         stages
@@ -12,12 +12,12 @@
           {
             steps
              {
-              git branch: 'openshift-aws', url: 'https://github.com/pavankjadda/BookStore.git'
+              git branch: 'master', url: 'https://github.com/Pratiksha0401/AWS_Demo1.git'
               script {
                   def pom = readMavenPom file: 'pom.xml'
                   version = pom.version
               }
-              sh "mvn install -DskipTests=true"
+              sh "mvn clean -DskipTests=true"
             }
           }
     }
